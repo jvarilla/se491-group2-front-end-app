@@ -1,0 +1,13 @@
+<div data-weather-search>
+  <input
+    label="Location"
+    type="text"
+    placeholder="Location"
+    data-location-input
+  />
+  <div data-weather-cards-container>
+    <app-weather-reading-card
+      [weatherReading]="currentWeatherReading"
+    ></app-weather-reading-card>
+  </div>
+</div>
