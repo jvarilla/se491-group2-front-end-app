@@ -10,6 +10,7 @@ import {FooterComponent} from "./components/footer/footer.component";
 import { WeatherSearchComponent } from './components/weather-search/weather-search.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import { WeatherReadingCardComponent } from './components/weather-reading-card/weather-reading-card.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { WeatherReadingCardComponent } from './components/weather-reading-card/w
     BrowserAnimationsModule,
     MaterialModule,
     MatFormFieldModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

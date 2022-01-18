@@ -26,4 +26,8 @@ export class WeatherSearchComponent implements OnInit {
     this.currentWeatherReadingSubscription?.unsubscribe();
   }
 
+  getGreeting(): void {
+    this.weatherReadingService.getTestGreeting();
+  }
+
 }
