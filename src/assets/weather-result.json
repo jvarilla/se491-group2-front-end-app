@@ -1,0 +1,691 @@
+{
+  "generatedTimeStamp": "2011-10-05T14:48:00.000Z",
+  "currentLocation": {
+    "cityName": "Chicago",
+    "zipCode": 60007,
+    "latitude": 42.01187,
+    "longitude": -87.99496
+  },
+  "currentConditions": {
+    "temp": 45.5,
+    "humidity": 0.90,
+    "windSpeed": 15.5,
+    "currentClouds": 1,
+    "weatherDescription": "Snow"
+  },
+  "tomorrowForecast": {
+    "dayOfWeek": "Mon",
+    "date": "2011-10-06",
+    "weather": {
+      "temp": 35.5,
+      "humidity": 0.80,
+      "windSpeed": 10.5,
+      "currentClouds": 1,
+      "weatherDescription": "Drizzle"
+    }
+  },
+  "dayForecasts": [
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "weather": {
+        "temp": 35.5,
+        "humidity": 0.80,
+        "windSpeed": 10.5,
+        "currentClouds": 1,
+        "weatherDescription": "Drizzle"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "weather": {
+        "temp": 35.5,
+        "humidity": 0.80,
+        "windSpeed": 10.5,
+        "currentClouds": 1,
+        "weatherDescription": "Rain"
+      }
+    },
+    {
+      "dayOfWeek": "Wed",
+      "date": "2011-10-08",
+      "weather": {
+        "temp": 35.5,
+        "humidity": 0.80,
+        "windSpeed": 10.5,
+        "currentClouds": 1,
+        "weatherDescription": "Clear"
+      }
+    },
+    {
+      "dayOfWeek": "Thu",
+      "date": "2011-10-09",
+      "weather": {
+        "temp": 35.5,
+        "humidity": 0.80,
+        "windSpeed": 10.5,
+        "currentClouds": 1,
+        "weatherDescription": "Clouds"
+      }
+    },
+    {
+      "dayOfWeek": "Fri",
+      "date": "2011-10-10",
+      "weather": {
+        "temp": 35.5,
+        "humidity": 0.80,
+        "windSpeed": 10.5,
+        "currentClouds": 1,
+        "weatherDescription": "Clear"
+      }
+    },
+    {
+      "dayOfWeek": "Sat",
+      "date": "2011-10-11",
+      "weather": {
+        "temp": 35.5,
+        "humidity": 0.80,
+        "windSpeed": 10.5,
+        "currentClouds": 1,
+        "weatherDescription": "Fog"
+      }
+    },
+    {
+      "dayOfWeek": "Sun",
+      "date": "2011-10-12",
+      "weather": {
+        "temp": 35.5,
+        "humidity": 0.80,
+        "windSpeed": 10.5,
+        "currentClouds": 1,
+        "weatherDescription": "Mist"
+      }
+    }
+  ],
+  "hourlyForecasts": [
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 0,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 1,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 2,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 3,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 4,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 5,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 6,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 7,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 8,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 9,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 10,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 11,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 12,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 13,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 14,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 15,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 16,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 17,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 18,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 19,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 20,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 21,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 22,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Mon",
+      "date": "2011-10-06",
+      "hour": 23,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 0,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 1,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 2,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 3,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 4,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 5,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 6,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 7,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 8,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 9,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 10,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 11,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 12,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 13,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 14,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 15,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 16,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 17,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 18,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 19,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 20,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 21,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 22,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    },
+    {
+      "dayOfWeek": "Tue",
+      "date": "2011-10-07",
+      "hour": 23,
+      "weather": {
+        "temp": 45.5,
+        "humidity": 0.90,
+        "windSpeed": 15.5,
+        "currentClouds": 1,
+        "weatherDescription": "Snow"
+      }
+    }
+  ],
+  "precaution": {
+    "message": "Bring an umbrella because it is supposed to rain today"
+  },
+  "alert": {
+    "title": "Tornado Watch!",
+    "message": "Take shelter because there is an active tornado watch for your area"
+  }
+}

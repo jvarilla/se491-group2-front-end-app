@@ -1,10 +1,5 @@
-import { CloudinessLevel } from "./cloudiness-level.enum";
-
 export interface WeatherReading {
+  location: string;
   temperature: number;
-  precipitation: number;
-  pressure: number;
   humidity: number;
-  windSpeed: number;
-  cloudiness: CloudinessLevel;
 }

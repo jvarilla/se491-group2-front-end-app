@@ -4,7 +4,9 @@
     type="text"
     placeholder="Location"
     data-location-input
+    #location
   />
+  <button (click)="getWeatherByCity($event, location)">Search</button>
   <div data-weather-cards-container>
     <app-weather-reading-card
       [weatherReading]="currentWeatherReading"

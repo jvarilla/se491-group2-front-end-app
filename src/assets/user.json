@@ -1,0 +1,37 @@
+{
+  "firstName": "Joseph",
+  "lastName": "Varilla",
+  "userId": "jvarilla981@gmail.com",
+  "recentlyViewedLocations": [
+    {
+      "cityName": "Chicago",
+      "zipCode": "60007",
+      "latitude": 42.01187,
+      "longitude": -87.99496
+    },
+    {
+      "cityName": "Des Plaines",
+      "zipCode": "60016",
+      "latitude": 42.05263,
+      "longitude": 42.05263
+    },
+    {
+      "cityName": "New York",
+      "zipCode": "10001",
+      "latitude": 40.75080,
+      "longitude": -73.99612
+    },
+    {
+      "cityName": "Tokyo",
+      "zipCode": "",
+      "latitude": 35.6762,
+      "longitude": 139.839478
+    },
+    {
+      "cityName": "London",
+      "zipCode": "",
+      "latitude": 51.5085,
+      "longitude": -0.1257
+    }
+  ]
+}

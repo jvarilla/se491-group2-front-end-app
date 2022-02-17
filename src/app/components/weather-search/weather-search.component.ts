@@ -30,4 +30,11 @@ export class WeatherSearchComponent implements OnInit {
     this.weatherReadingService.getTestGreeting();
   }
 
+  getWeatherByCity(event: any, input: HTMLInputElement) {
+    console.log(event);
+    const city = input.value.toString().toLowerCase().trim();
+    console.log('city: ', city);
+    this.weatherReadingService.getWeatherReadingByCity(city);
+  }
+
 }
