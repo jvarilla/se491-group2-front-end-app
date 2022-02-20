@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {WeatherReading} from "../../classes/weather/weather-reading.interface";
+import {WeatherReading} from "../../../classes/weather/old/weather-reading.interface";
 
 @Component({
   selector: 'app-weather-reading-card',

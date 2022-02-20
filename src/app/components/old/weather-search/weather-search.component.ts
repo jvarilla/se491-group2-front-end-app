@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {WeatherReadingService} from "../../service/weather-reading.service";
+import {WeatherReadingService} from "../../../service/weather-reading.service";
 import {Subscription} from "rxjs";
-import {WeatherReading} from "../../classes/weather/weather-reading.interface";
+import {WeatherReading} from "../../../classes/weather/old/weather-reading.interface";
 
 @Component({
   selector: 'app-weather-search',

@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Subject, take} from "rxjs";
-import {WeatherReading} from "../classes/weather/weather-reading.interface";
+import {WeatherReading} from "../classes/weather/old/weather-reading.interface";
 import {HttpService} from "./http/http.service";
 import {API_ROUTES} from "./routes/api-routes";
 

@@ -17,10 +17,10 @@ export class HttpService {
     return this.httpClient.get<T>(`${this.apiBaseUrl}${path}`);
   }
 
-  post<T>(path: string, body: object): Observable<T> {
+  post<T>(path: string, data: object): Observable<T> {
     return this.httpClient.post<T>(
       `${this.apiBaseUrl}${path}`,
-      body,
+      data,
     );
   }
 }

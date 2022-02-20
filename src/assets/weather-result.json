@@ -2,7 +2,7 @@
   "generatedTimeStamp": "2011-10-05T14:48:00.000Z",
   "currentLocation": {
     "cityName": "Chicago",
-    "zipCode": 60007,
+    "zipCode": "60007",
     "latitude": 42.01187,
     "longitude": -87.99496
   },

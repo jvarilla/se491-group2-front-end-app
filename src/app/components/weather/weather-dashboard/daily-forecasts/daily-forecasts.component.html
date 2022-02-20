@@ -1,0 +1,7 @@
+<h2>Day Forecasts</h2>
+<div class="daily-forecasts-container">
+  <app-daily-forecast-card
+    *ngFor="let dailyForecast of dailyForecasts"
+    [dailyForecast]="dailyForecast">
+  </app-daily-forecast-card>
+</div>
