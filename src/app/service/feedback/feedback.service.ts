@@ -16,5 +16,6 @@ export class FeedbackService {
 
   public postFeedback(feedback: Feedback): void {
     this.feedbackResultSubject.next('success');
+    
   }
 }
