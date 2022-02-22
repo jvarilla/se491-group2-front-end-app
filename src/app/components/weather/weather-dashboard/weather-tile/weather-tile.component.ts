@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Weather} from "../../../../classes/weather/weather.interface";
 
 @Component({
   selector: 'app-weather-tile',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather-tile.component.scss']
 })
 export class WeatherTileComponent implements OnInit {
+  @Input() label: string | undefined;
+  @Input() weather: Weather | undefined;
 
   constructor() { }
 

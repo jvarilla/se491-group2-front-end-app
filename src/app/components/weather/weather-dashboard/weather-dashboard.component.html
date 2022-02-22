@@ -2,21 +2,25 @@
 <div class="wrapper">
   <div class="weather-search">
     Weather Search
+    <input type="text"/>
   </div>
 
   <div class="location-title">
-    Chicago, IL
+    <span>{{ weatherResult?.currentLocation?.cityName }}</span>
   </div>
 
   <div class="current-conditions">
-    <app-weather-tile>
+    <app-weather-tile
+      [label]="'Current Conditions'"
+      [weather]="weatherResult?.currentConditions">
     </app-weather-tile>
   </div>
 
   <div class="tomorrow-forecast">
     <app-weather-tile
-
-    ></app-weather-tile>
+      [label]="'Tomorrow'"
+      [weather]="weatherResult?.tomorrowForecast?.weather">
+    </app-weather-tile>
   </div>
 
   <div class="viewed-locations">
