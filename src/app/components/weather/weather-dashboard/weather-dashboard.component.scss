@@ -1,75 +1,55 @@
-//.wrapper {
-//  display: grid;
-//  width: 100%;
-//  height: 200px;
-//  grid-template: "weather-search"
-//
-//  .weather-search {
-//    grid-area: weather-search;
-//    background-color: white;
-//  }
-//
-//  .current-conditions {
-//    grid-area: current-conditions;
-//    background-color: blue;
-//  }
-//  .tomorrow-forecast {
-//    grid-area: tomorrow-forecast;
-//    background-color: yellow;
-//  }
-//
-//  .viewed-locations {
-//    grid-area: viewed-locations;
-//    background-color: purple;
-//  }
-//
-//  .day-forecasts {
-//    grid-area: day-forecasts;
-//    background-color: red;
-//  }
-//
-//  .hour-forecasts {
-//    grid-area: hour-forecasts;
-//    background-color: green;
-//  }
-//
-//}
+.wrapper {
+  display: grid;
+  width: 100%;
+  height: fit-content;
+  grid-gap: 5%;
+  grid-template: "weather-search     location-title       precaution"
+                 "viewed-locations  current-conditions    day-forecasts"
+                 "viewed-locations  current-conditions    day-forecasts"
+                 "viewed-locations  tomorrow-forecast    day-forecasts"
+                 "viewed-locations  tomorrow-forecast    day-forecasts"
+                 "hour-forecasts     hour-forecasts      hour-forecasts"
+                 "hour-forecasts     hour-forecasts      hour-forecasts";
 
-//.wrapper {
-//  display: grid;
-//  grid-template-columns: repeat(3, 1fr);
-//  gap: 10px;
-//  grid-auto-rows: minmax(100px, auto);
-//
-//  .current-conditions {
-//    grid-column: 2 / 3;
-//    grid-row: 1 / 4;
-//    background-color: blue;
-//  }
-//  .tomorrow-forecast {
-//    grid-column: 2 / 4;
-//    grid-row: 1 / 3;
-//    background-color: yellow;
-//  }
-//  .viewed-locations {
-//    grid-column: 1;
-//    grid-row: 1;
-//    background-color: purple;
-//  }
-//  .weather-alert {
-//    grid-column: 3;
-//    grid-row: 1;
-//    background-color: orange;
-//  }
-//  .day-forecasts {
-//    grid-column: 3;
-//    grid-row: 2 / 3;
-//    background-color: red;
-//  }
-//  .hour-forecasts {
-//    grid-column: 3;
-//    grid-row: 4;
-//    background-color: green;
-//  }
-//}
+  .weather-search {
+    grid-area: weather-search;
+    background-color: white;
+  }
 
+  .current-conditions {
+    grid-area: current-conditions;
+    background-color: blue;
+  }
+
+  .tomorrow-forecast {
+    grid-area: tomorrow-forecast;
+    background-color: yellow;
+  }
+
+  .viewed-locations {
+    grid-area: viewed-locations;
+    background-color: purple;
+  }
+
+  .day-forecasts {
+    grid-area: day-forecasts;
+    background-color: red;
+  }
+
+  .hour-forecasts {
+    grid-area: hour-forecasts;
+    background-color: green;
+  }
+
+  .precaution {
+    grid-area: precaution;
+    background-color: teal;
+  }
+
+  .location-title {
+    grid-area: location-title;
+    background-color: black;
+    color: white;
+  }
+
+}

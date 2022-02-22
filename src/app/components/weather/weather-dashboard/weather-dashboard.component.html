@@ -1,26 +1,42 @@
 <h1>Weather Dashboard</h1>
 <div class="wrapper">
   <div class="weather-search">
+    Weather Search
   </div>
-  <app-weather-tile
-    class="current-conditions">
-  </app-weather-tile>
-  <app-weather-tile
-    class="tomorrow-forecast"
-  ></app-weather-tile>
-  <app-viewed-locations
-    class="viewed-locations"
-  ></app-viewed-locations>
-  <app-precaution
-    class="precaution"
-  ></app-precaution>
-  <app-daily-forecasts
-    class="day-forecasts"
-    [dailyForecasts]="weatherResult?.dayForecasts">
-  </app-daily-forecasts>
-  <app-hourly-forecasts
-    class="hour-forecasts"
-    [hourlyForecasts]="weatherResult?.hourlyForecasts">
-  </app-hourly-forecasts>
+
+  <div class="location-title">
+    Chicago, IL
+  </div>
+
+  <div class="current-conditions">
+    <app-weather-tile>
+    </app-weather-tile>
+  </div>
+
+  <div class="tomorrow-forecast">
+    <app-weather-tile
+
+    ></app-weather-tile>
+  </div>
+
+  <div class="viewed-locations">
+    <app-viewed-locations></app-viewed-locations>
+  </div>
+
+  <div class="precaution">
+    <app-precaution></app-precaution>
+  </div>
+
+  <div class="day-forecasts">
+    <app-daily-forecasts
+      [dailyForecasts]="weatherResult?.dayForecasts">
+    </app-daily-forecasts>
+  </div>
+
+  <div class="hour-forecasts">
+    <app-hourly-forecasts
+      [hourlyForecasts]="weatherResult?.hourlyForecasts">
+    </app-hourly-forecasts>
+  </div>
 </div>
 
