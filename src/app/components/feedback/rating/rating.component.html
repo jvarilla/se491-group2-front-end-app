@@ -1,0 +1,9 @@
+<div>
+  <mat-button-toggle-group>
+    <mat-button-toggle
+      *ngFor="let rating of ratings"
+      (click)="onRatingButtonClicked(rating)">
+      {{ rating }}
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>

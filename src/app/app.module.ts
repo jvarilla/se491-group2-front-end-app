@@ -23,6 +23,8 @@ import { DailyForecastsComponent } from './components/weather/weather-dashboard/
 import { DailyForecastCardComponent } from './components/weather/weather-dashboard/daily-forecasts/daily-forecast-card/daily-forecast-card.component';
 import { WeatherAlertComponent } from './components/weather/weather-dashboard/weather-alert/weather-alert.component';
 import { PrecautionComponent } from './components/weather/weather-dashboard/precaution/precaution.component';
+import { RatingComponent } from './components/feedback/rating/rating.component';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 @NgModule({
   declarations: [
@@ -43,15 +45,17 @@ import { PrecautionComponent } from './components/weather/weather-dashboard/prec
     DailyForecastCardComponent,
     WeatherAlertComponent,
     PrecautionComponent,
+    RatingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    MatFormFieldModule,
-    HttpClientModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        MatFormFieldModule,
+        HttpClientModule,
+        MatButtonToggleModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

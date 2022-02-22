@@ -2,17 +2,23 @@
   <div class="feedback-form">
     <h1>Please Give Us Your Feedback</h1>
     <div class="ratings">
-      <input type="number" min="0" max="5" step="1"/>
+      <app-rating
+        (ratingChange)="onRatingChange($event)">
+      </app-rating>
     </div>
     <textarea
       placeholder="Your Feedback..."
       class="feedback-comments"
-      maxlength="1000">
+      maxlength="1000"
+      (change)="onCommentsChange($event)"
+    >
   </textarea>
     <button
       mat-raised-button
       color="accent"
       class="feedback-submit-btn"
-    >Submit</button>
+      (click)="onSubmitButtonClick()">
+      Submit
+    </button>
   </div>
 </div>

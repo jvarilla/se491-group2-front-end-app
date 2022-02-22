@@ -24,7 +24,10 @@
   </div>
 
   <div class="viewed-locations">
-    <app-viewed-locations></app-viewed-locations>
+    <app-viewed-locations
+      [locations]="currentUser?.recentlyViewedLocations"
+    >
+    </app-viewed-locations>
   </div>
 
   <div class="precaution">

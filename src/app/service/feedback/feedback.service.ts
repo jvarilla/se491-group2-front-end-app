@@ -15,7 +15,7 @@ export class FeedbackService {
               private readonly userAuthService: UserAuthService) {}
 
   public postFeedback(feedback: Feedback): void {
+    console.log('feedback service: ', feedback);
     this.feedbackResultSubject.next('success');
-    
   }
 }
