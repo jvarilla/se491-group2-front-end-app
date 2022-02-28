@@ -4,5 +4,8 @@ export const API_ROUTES = {
   },
   WEATHER: {
     GET_BY_CITY: (city: string) => `/weather/${city}`
+  },
+  FEEDBACK: {
+    POST: () => '/feedback'
   }
 }

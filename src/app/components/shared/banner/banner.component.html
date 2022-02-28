@@ -1,0 +1,17 @@
+<mat-card class="banner"
+          *ngIf="show"
+          [ngClass]="{ error: isError, success: !isError}">
+  <div class="banner-actions">
+    <div class="banner-title-container">
+      <h2>{{ title }}</h2>
+    </div>
+    <button mat-icon-button
+            (click)="onCloseBtnClicked()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="banner-content">
+    <p>{{ body }}</p>
+  </div>
+</mat-card>

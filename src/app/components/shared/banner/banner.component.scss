@@ -1,0 +1,29 @@
+.banner {
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+  flex-grow: inherit;
+
+  .banner-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .banner-title-container {
+      padding-top: 1%;
+    }
+  }
+}
+
+.error {
+  border-left: red solid 10px;
+}
+
+.success {
+  border-left: limegreen solid 10px;
+}
+
+:host ::ng-deep mat-card {
+  padding: 0.5% 1%;
+}

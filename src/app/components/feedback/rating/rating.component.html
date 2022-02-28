@@ -1,9 +1,13 @@
 <div>
-  <mat-button-toggle-group>
     <mat-button-toggle
+      #ratingBtnToggle
+      mat-icon-button
       *ngFor="let rating of ratings"
-      (click)="onRatingButtonClicked(rating)">
-      {{ rating }}
+      value="{{ rating }}"
+      (click)="onRatingButtonClicked(rating)"
+    >
+      <mat-icon class="rating-star">
+        star
+      </mat-icon>
     </mat-button-toggle>
-  </mat-button-toggle-group>
 </div>

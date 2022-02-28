@@ -1,15 +1,14 @@
 <div class="feedback-screen-container">
-  <div class="feedback-form">
+  <form [formGroup]="feedbackForm" class="feedback-form">
     <h1>Please Give Us Your Feedback</h1>
     <div class="ratings">
-      <app-rating
-        (ratingChange)="onRatingChange($event)">
-      </app-rating>
+      <app-rating formControlName="rating"></app-rating>
     </div>
     <textarea
       placeholder="Your Feedback..."
       class="feedback-comments"
       maxlength="1000"
+      formControlName="comments"
       (change)="onCommentsChange($event)"
     >
   </textarea>
@@ -20,5 +19,5 @@
       (click)="onSubmitButtonClick()">
       Submit
     </button>
-  </div>
+  </form>
 </div>
