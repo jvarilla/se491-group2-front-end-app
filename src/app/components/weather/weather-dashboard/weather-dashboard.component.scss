@@ -18,27 +18,31 @@
 
   .current-conditions {
     grid-area: current-conditions;
-    background-color: blue;
+    background-color: white;
   }
 
   .tomorrow-forecast {
     grid-area: tomorrow-forecast;
-    background-color: yellow;
+    background-color: aqua;
   }
 
   .viewed-locations {
     grid-area: viewed-locations;
-    background-color: purple;
+    background-color: #ccccff;
+    font-family: "Montserrat";
   }
 
   .day-forecasts {
     grid-area: day-forecasts;
-    background-color: red;
+    background-color: #ccccff;
+    font-family: "Montserrat";
   }
 
   .hour-forecasts {
     grid-area: hour-forecasts;
-    background-color: green;
+    background-color: #ccccff;
+    font-family: "Montserrat";
+    font-style: italic;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,13 +53,14 @@
 
   .precaution {
     grid-area: precaution;
-    background-color: teal;
+    background-color: #ccccff;
   }
 
   .location-title {
+    font-family: "Montserrat";
     grid-area: location-title;
-    background-color: black;
-    color: white;
+    color: black;
+    font-size: 70px;
   }
 
 }
