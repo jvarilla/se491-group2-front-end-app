@@ -9,20 +9,26 @@ import {API_ROUTES} from "../routes/api-routes";
   providedIn: 'root'
 })
 export class FeedbackService {
-  private feedbackResultSubject: Subject<string> = new Subject<string>();
-  public feedbackResult$: Observable<string> = this.feedbackResultSubject.asObservable();
+  private feedbackSubmitSuccess: Subject<void> = new Subject<void>();
+  public feedbackSubmitResultSuccess$: Observable<void> =
+    this.feedbackSubmitSuccess.asObservable();
+
+  private feedbackSubmitFailure: Subject<any> = new Subject<any>();
+  public feedbackSubmitResultFailure$: Observable<any> =
+    this.feedbackSubmitFailure.asObservable();
 
   constructor(private readonly httpService: HttpService,
               private readonly userAuthService: UserAuthService) {}
 
   public postFeedback(feedback: Feedback): void {
-    console.log('feedback service: ', feedback);
+    feedback.userId = this.userAuthService.getCurrentUser()?.userId || '';
+
     this.httpService
       .post<Feedback>(API_ROUTES.FEEDBACK.POST(), feedback)
       .pipe(take(1))
       .subscribe({
-        next: () => this.feedbackResultSubject.next('success'),
-        error: () => this.feedbackResultSubject.error('success'),
+        next: () => this.feedbackSubmitSuccess.next(),
+        error: (err) => this.feedbackSubmitFailure.next(err),
       });
   }
 }

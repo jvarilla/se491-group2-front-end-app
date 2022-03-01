@@ -10,7 +10,6 @@ export class BannerService {
   public bannerConfig$ = this.bannerConfigSubject.asObservable();
 
   showSuccessBanner(title: string, body: string): void {
-    console.log('success banner to be shown')
     this.bannerConfigSubject.next({
       title,
       body,

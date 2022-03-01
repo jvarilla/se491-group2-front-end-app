@@ -9,13 +9,13 @@
       class="feedback-comments"
       maxlength="1000"
       formControlName="comments"
-      (change)="onCommentsChange($event)"
     >
   </textarea>
     <button
       mat-raised-button
       color="accent"
       class="feedback-submit-btn"
+      [disabled]="feedbackForm.invalid"
       (click)="onSubmitButtonClick()">
       Submit
     </button>

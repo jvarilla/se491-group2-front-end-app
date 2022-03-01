@@ -1,7 +1,9 @@
 <div>
     <mat-button-toggle
+      class="rating-toggle-btn"
       #ratingBtnToggle
       mat-icon-button
+      [disabled]="disabled"
       *ngFor="let rating of ratings"
       value="{{ rating }}"
       (click)="onRatingButtonClicked(rating)"

@@ -11,14 +11,14 @@ import {MatButtonToggle} from '@angular/material/button-toggle';
       provide: NG_VALUE_ACCESSOR,
       multi:true,
       useExisting: RatingComponent
-    },
+    }
   ]
 })
-export class RatingComponent implements  ControlValueAccessor {
+export class RatingComponent implements ControlValueAccessor {
   @ViewChildren('ratingBtnToggle') ratingBtnToggles: QueryList<MatButtonToggle> | undefined;
 
   ratings = [1,2,3,4,5];
-  selectedRating: number | undefined = undefined;
+  selectedRating: number | null = null;
 
   touched = false;
   disabled = false;
