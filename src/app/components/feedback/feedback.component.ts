@@ -7,7 +7,7 @@ import {
   FEEDBACK_ERROR_TITLE,
   FEEDBACK_SUCCESS_BODY,
   FEEDBACK_SUCCESS_TITLE
-} from "../../utils/feedback-constants";
+} from "../../constants/feedback-constants";
 import {Subscription} from "rxjs";
 
 @Component({

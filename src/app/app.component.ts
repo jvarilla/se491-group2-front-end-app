@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {UserAuthService} from "./service/user-auth/user-auth.service";
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,8 @@ import {UserAuthService} from "./service/user-auth/user-auth.service";
 export class AppComponent implements OnInit {
   title = 'se491-group2-app';
 
-  constructor(private readonly userAuthService: UserAuthService) {}
-
+  constructor() {}
 
   ngOnInit() {
-    this.userAuthService.login('', '');
   }
 }
