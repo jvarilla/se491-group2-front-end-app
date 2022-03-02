@@ -17,28 +17,33 @@
   }
 
   .current-conditions {
+    border: 5px solid blue;
     grid-area: current-conditions;
     background-color: white;
   }
 
   .tomorrow-forecast {
+    border: 5px solid blue;
     grid-area: tomorrow-forecast;
     background-color: aqua;
   }
 
   .viewed-locations {
+    border: 5px solid blue;
     grid-area: viewed-locations;
     background-color: #ccccff;
     font-family: "Montserrat";
   }
 
   .day-forecasts {
+    border: 5px solid blue;
     grid-area: day-forecasts;
     background-color: #ccccff;
     font-family: "Montserrat";
   }
 
   .hour-forecasts {
+    border: 5px solid blue;
     grid-area: hour-forecasts;
     background-color: #ccccff;
     font-family: "Montserrat";
@@ -54,6 +59,7 @@
   .precaution {
     grid-area: precaution;
     background-color: #ccccff;
+    border: 5px solid blue;
   }
 
   .location-title {

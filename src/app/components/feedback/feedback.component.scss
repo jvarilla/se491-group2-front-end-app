@@ -1,4 +1,6 @@
 .feedback-screen-container {
+  background-color: #ccccff;
+  border: 5px solid blue;
   width: inherit;
   display: flex;
   height: 100%;
@@ -20,6 +22,8 @@
 
     .feedback-submit-btn {
       margin-top: 20px;
+      font-family: Montserrat;
+      color: black;
     }
   }
 }
