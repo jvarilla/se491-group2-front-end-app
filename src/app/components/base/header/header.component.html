@@ -1,20 +1,12 @@
 <mat-toolbar color="primary">
-
-    <a [href]="'/'">SE 491 Group 2 App</a>
-
+  <a [href]="'/'">SE 491 Group 2 App</a>
   <span class="spacer"></span>
-
-
-    <a [href]="'/'">Weather</a>
-
-
-
-    <a [href]="'/feedback'">Feedback</a>
-
-
-  <span class="spacer"></span>
-
-    <a [href]="'/logout'">Logout</a>
-
+    <a [routerLink]="['/weather']"
+       *ngIf="isAuthenticated$ | async">Weather</a>
+    <a [routerLink]="['/feedback']"
+       *ngIf="isAuthenticated$ | async">Feedback</a>
+    <span class="spacer"></span>
+    <a (click)="onLogoutButtonClicked()"
+       *ngIf="isAuthenticated$ | async">Logout</a>
 </mat-toolbar>
 

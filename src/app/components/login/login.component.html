@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="login-screen-container">
+  <mat-card class="login-form-container">
+    <form [formGroup]="loginForm"
+          (submit)="onSubmitLogin()"
+          class="login-form">
+      <h1>Log In</h1>
+      <img src="http://openweathermap.org/img/wn/01d@2x.png"/>
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input type="text" matInput formControlName='username'>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" />
+      </mat-form-field>
+      <button
+        mat-raised-button
+        [disabled]="loginForm.invalid"
+        color="primary"
+        type="submit"
+        class="feedback-submit-btn">
+        Login
+      </button>
+    </form>
+  </mat-card>
+</div>

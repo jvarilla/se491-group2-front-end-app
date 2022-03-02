@@ -31,7 +31,10 @@
   </div>
 
   <div class="precaution">
-    <app-precaution></app-precaution>
+    <app-precaution
+      [precaution]="weatherResult?.precaution"
+    >
+    </app-precaution>
   </div>
 
   <div class="day-forecasts">

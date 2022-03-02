@@ -25,6 +25,10 @@ import { WeatherAlertComponent } from './components/weather/weather-dashboard/we
 import { PrecautionComponent } from './components/weather/weather-dashboard/precaution/precaution.component';
 import { RatingComponent } from './components/feedback/rating/rating.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import { BannerComponent } from './components/shared/banner/banner.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -46,16 +50,20 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     WeatherAlertComponent,
     PrecautionComponent,
     RatingComponent,
+    BannerComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MaterialModule,
-        MatFormFieldModule,
-        HttpClientModule,
-        MatButtonToggleModule,
-    ],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    MatButtonToggleModule,
+    ReactiveFormsModule,
+    MatInputModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

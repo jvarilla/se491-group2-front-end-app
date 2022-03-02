@@ -1,45 +1,66 @@
-import { Component, OnInit } from '@angular/core';
-import {Feedback} from "../../classes/feedback/feedback.interface";
-import {UserAuthService} from "../../service/user-auth/user-auth.service";
-import {User} from "../../classes/user/user.interface";
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FeedbackService} from "../../service/feedback/feedback.service";
+import {BannerService} from "../shared/banner/banner.service";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {
+  FEEDBACK_ERROR_BODY,
+  FEEDBACK_ERROR_TITLE,
+  FEEDBACK_SUCCESS_BODY,
+  FEEDBACK_SUCCESS_TITLE
+} from "../../constants/feedback-constants";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-feedback',
   templateUrl: './feedback.component.html',
   styleUrls: ['./feedback.component.scss']
 })
-export class FeedbackComponent implements OnInit {
-  feedback: Feedback;
+export class FeedbackComponent implements OnInit, OnDestroy {
+  feedbackForm: FormGroup;
+  feedbackSubmitSuccess: Subscription;
+  feedbackSubmitFailure: Subscription;
 
-  constructor(private readonly userAuthService: UserAuthService,
-              private readonly feedbackService: FeedbackService) {
-    this.feedback = {
-      userId: '',
-      rating: 0,
-      comments: ''
-    };
+  constructor(private readonly feedbackService: FeedbackService,
+              private readonly bannerService: BannerService,
+              private fb: FormBuilder) {
+
+    this.feedbackForm = this.fb.group({
+      rating: [null, [Validators.required]],
+      comments: ['']
+    });
+
+    this.feedbackSubmitSuccess =
+      this.feedbackService.feedbackSubmitResultSuccess$
+        .subscribe(() => this.onSubmitFeedbackSuccess());
+
+    this.feedbackSubmitFailure =
+      this.feedbackService.feedbackSubmitResultFailure$
+        .subscribe(() => this.onSubmitFeedbackFailure());
   }
 
-  ngOnInit(): void {
-    const currentUser: User | undefined =
-      this.userAuthService.getCurrentUser();
-    this.feedback.userId = currentUser ? currentUser.userId : '';
-  }
-
-  onRatingChange(rating: number): void {
-    console.log('rating: ', rating);
-    this.feedback.rating = rating;
-  }
-
-  onCommentsChange(event: any): void {
-    console.log('comments: ', event.target.value);
-    this.feedback.comments = event.target.value.toString();
-  }
+  ngOnInit(): void {}
 
   onSubmitButtonClick(): void {
-    console.log('submit: ', this.feedback);
-    this.feedbackService.postFeedback(this.feedback);
+    this.feedbackService.postFeedback(this.feedbackForm.value);
   }
 
+  onSubmitFeedbackSuccess(): void {
+    this.bannerService.showSuccessBanner(
+      FEEDBACK_SUCCESS_TITLE,
+      FEEDBACK_SUCCESS_BODY,
+    )
+    this.feedbackForm.reset();
+  }
+
+  onSubmitFeedbackFailure(): void {
+    this.bannerService.showErrorBanner(
+      FEEDBACK_ERROR_TITLE,
+      FEEDBACK_ERROR_BODY,
+    );
+  }
+
+  ngOnDestroy() {
+    this.feedbackSubmitSuccess?.unsubscribe();
+    this.feedbackSubmitFailure?.unsubscribe();
+  }
 }

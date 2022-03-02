@@ -1,24 +1,23 @@
 <div class="feedback-screen-container">
-  <div class="feedback-form">
+  <form [formGroup]="feedbackForm" class="feedback-form">
     <h1 style="font-family: Montserrat;">Please Give Us Your Feedback</h1>
     <div class="ratings">
-      <app-rating
-        (ratingChange)="onRatingChange($event)">
-      </app-rating>
+      <app-rating formControlName="rating"></app-rating>
     </div>
     <textarea
       placeholder="Your Feedback..."
       class="feedback-comments"
       maxlength="1000"
-      (change)="onCommentsChange($event)"
+      formControlName="comments"
     >
   </textarea>
     <button
       mat-raised-button
       color="accent"
       class="feedback-submit-btn"
+      [disabled]="feedbackForm.invalid"
       (click)="onSubmitButtonClick()">
       Submit
     </button>
-  </div>
+  </form>
 </div>

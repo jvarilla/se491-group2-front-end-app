@@ -1,0 +1,10 @@
+:host ::ng-deep .mat-button-toggle {
+  color: gray;
+  background-color: white;
+}
+
+:host ::ng-deep .mat-button-toggle-checked {
+  color: white;
+  background-color: gold;
+}
+
