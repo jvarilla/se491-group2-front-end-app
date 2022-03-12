@@ -1,5 +1,8 @@
-<mat-card (click)="openModal()"
-            tabindex="0">
+<mat-card
+  (click)="openModal()"
+  (keydown.space)="openModal()"
+  (keydown.enter)="openModal()"
+  tabindex="0">
     {{ hourlyForecast?.dayOfWeek }}
     {{ hourlyForecast?.hour | fromMilitaryHour }}
     {{ hourlyForecast?.weather?.temp | toFahrenheit }}

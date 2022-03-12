@@ -1,9 +1,20 @@
-<h2 mat-dialog-title>Weather</h2>
+<h2 mat-dialog-title>{{ title}}</h2>
 
 <mat-dialog-content>
-  YOOOOOO!
+  <app-weather-icon [weatherDescription]="weather?.weatherDescription">
+  </app-weather-icon>
+  <ul>
+    <li>Temperature: {{ weather?.temp | toFahrenheit }}</li>
+    <li>Cloudiness: {{ weather?.currentClouds }}</li>
+    <li>Humidity: {{ weather?.humidity }}</li>
+    <li>Wind Speed: {{ weather?.windSpeed }} mph</li>
+  </ul>
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <button class="mat-raised-button"(click)="close()">Close</button>
+  <button
+    mat-raised-button
+    mat-dialog-close
+    color="secondary"
+    (click)="close()">Close</button>
 </mat-dialog-actions>

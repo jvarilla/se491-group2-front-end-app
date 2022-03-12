@@ -28,6 +28,7 @@ export class WeatherIconComponent implements OnInit, OnChanges {
   }
   private readonly weatherIconBaseUrl: string;
   weatherIconPath: string = '';
+  weatherIconAltText: string = '';
 
   @Input() weatherDescription: WeatherDescription | undefined;
 
@@ -46,7 +47,8 @@ export class WeatherIconComponent implements OnInit, OnChanges {
     // @ts-ignore
     || WeatherIconComponent.imgFileNameMap[WeatherDescription.Clear.toString().toLowerCase()];
     console.log(currentWeatherDescription);
-    this.weatherIconPath = `${this.weatherIconBaseUrl}${iconFileName}`
+    this.weatherIconPath = `${this.weatherIconBaseUrl}${iconFileName}`;
+    this.weatherIconAltText = `${currentWeatherDescription.toString()}. `;
   }
 
 }

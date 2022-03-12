@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {HourlyForecast} from "../../../../../classes/weather/forecast/hourly-forecast.interface";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {WeatherModalComponent} from "../../../weather-modal/weather-modal.component";
 
 @Component({
   selector: 'app-hourly-forecast-card',
@@ -9,11 +11,23 @@ import {HourlyForecast} from "../../../../../classes/weather/forecast/hourly-for
 export class HourlyForecastCardComponent implements OnInit {
   @Input() hourlyForecast: HourlyForecast | undefined;
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  openModal() {}
+  openModal() {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    dialogConfig.data = {
+      title: 'Hourly Forecast for: ',
+      weather: this.hourlyForecast?.weather,
+    };
+
+    this.dialog.open(WeatherModalComponent, dialogConfig);
+  }
 
 }
