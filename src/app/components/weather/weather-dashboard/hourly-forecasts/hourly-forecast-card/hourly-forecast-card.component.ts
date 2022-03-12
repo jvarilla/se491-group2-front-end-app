@@ -14,4 +14,6 @@ export class HourlyForecastCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openModal() {}
+
 }

@@ -7,6 +7,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [],
@@ -19,6 +20,7 @@ import {MatInputModule} from "@angular/material/input";
     MatButtonToggleModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
   ],
   exports: [
     MatToolbarModule,
@@ -28,6 +30,7 @@ import {MatInputModule} from "@angular/material/input";
     MatButtonToggleModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
   ],
   providers: [
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}

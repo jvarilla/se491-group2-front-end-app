@@ -1,11 +1,22 @@
-p{
+:host::ng-deep mat-card {
   padding: 20px;
   font-family: 'Montserrat';
   font-style: italic;
   background-color: white;
-}
-/*.hourly-forecast-card {
   margin: auto 5px;
-  height: 100px;
-  width: 50px;
-}*/
+  cursor: pointer;
+}
+
+:host::ng-deep mat-card:hover, mat-card:focus {
+  background-color: rgba(0,0,0,0.50);
+  color: white;
+  margin: -5px 5px 2px 5px;
+  box-shadow: 5px 5px 0 white;
+
+  app-weather-icon {
+    img {
+      filter: invert(100%)
+    }
+  }
+}
+

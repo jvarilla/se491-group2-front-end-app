@@ -5,7 +5,7 @@
       </mat-card-header>
     </div>
   <div style="font-family: Montserrat;">
-    <p>{{ weather?.temp }}</p>
+    <p>{{ weather?.temp | toFahrenheit }}</p>
     <p>{{ weather?.weatherDescription }}</p>
   </div>
 </mat-card>

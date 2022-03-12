@@ -1,4 +1,4 @@
 <p>
   {{ dailyForecast?.dayOfWeek }}
-  {{ dailyForecast?.weather?.temp }} F
+  {{ dailyForecast?.weather?.temp | toFahrenheit }}
 </p>

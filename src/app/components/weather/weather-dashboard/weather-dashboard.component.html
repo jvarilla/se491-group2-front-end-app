@@ -1,51 +1,71 @@
 <h1>Weather Dashboard</h1>
 <div class="wrapper">
-  <div class="weather-search">
-    Weather Search
-    <input type="text"/>
-  </div>
+  <form
+    class="weather-search"
+    [formGroup]="weatherSearchForm"
+        (submit)="onSubmitWeatherSearch()">
+    <mat-form-field appearance="fill">
+      <mat-label>Search Weather for Location</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName='location'
+        [placeholder]="'Enter a city name or a zip code'"
+      />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit"
+      style="margin-left: 5px;"
+      [disabled]="weatherSearchForm.controls['location'].value === null"
+    >
+      Search
+    </button>
+  </form>
 
   <div class="location-title">
     <span>{{ weatherResult?.currentLocation?.cityName }}</span>
   </div>
 
-  <div class="current-conditions">
+  <div class="current-conditions blue-pop">
     <app-weather-tile
       [label]="'Current Conditions'"
       [weather]="weatherResult?.currentConditions">
     </app-weather-tile>
   </div>
 
-  <div class="tomorrow-forecast">
+  <div class="tomorrow-forecast blue-pop">
     <app-weather-tile
       [label]="'Tomorrow'"
       [weather]="weatherResult?.tomorrowForecast?.weather">
     </app-weather-tile>
   </div>
 
-  <div class="viewed-locations">
+  <div class="viewed-locations blue-pop">
     <app-viewed-locations
       [locations]="currentUser?.recentlyViewedLocations"
+      (locationSelected)="onLocationSelected($event)"
     >
     </app-viewed-locations>
   </div>
 
-  <div class="precaution">
+  <div class="precaution blue-pop">
     <app-precaution
       [precaution]="weatherResult?.precaution"
     >
     </app-precaution>
   </div>
 
-  <div class="day-forecasts">
+  <div class="day-forecasts blue-pop">
     <app-daily-forecasts
       [dailyForecasts]="weatherResult?.dayForecasts">
     </app-daily-forecasts>
   </div>
 
-  <div class="hour-forecasts">
+  <div class="hour-forecasts blue-pop">
     <app-hourly-forecasts
-      [hourlyForecasts]="weatherResult?.hourlyForecasts">
+      [hourlyForecasts]="weatherResult?.hourlyForecast">
     </app-hourly-forecasts>
   </div>
 </div>

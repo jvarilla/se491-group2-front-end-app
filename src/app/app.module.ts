@@ -29,6 +29,12 @@ import { BannerComponent } from './components/shared/banner/banner.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {CommonModule} from "@angular/common";
+import {WeatherService} from "./service/weather/weather.service";
+import {MockWeatherService} from "./service/weather/mock-weather.service";
+import {MilitaryTimeToHourPipe} from "./pipes/military-time-to-hour.pipe";
+import {FahrenheitPipe} from "./pipes/fahrenheit.pipe";
+import { WeatherModalComponent } from './components/weather/weather-modal/weather-modal.component';
+import { WeatherIconComponent } from './components/weather/weather-icon/weather-icon.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +57,10 @@ import {CommonModule} from "@angular/common";
     PrecautionComponent,
     RatingComponent,
     BannerComponent,
+    MilitaryTimeToHourPipe,
+    FahrenheitPipe,
+    WeatherModalComponent,
+    WeatherIconComponent,
   ],
   imports: [
     CommonModule,
@@ -64,7 +74,7 @@ import {CommonModule} from "@angular/common";
     ReactiveFormsModule,
     MatInputModule,
   ],
-  providers: [],
+  providers: [{ provide: WeatherService, useClass: MockWeatherService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

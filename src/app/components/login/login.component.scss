@@ -9,7 +9,7 @@
     width: 20vw;
     min-height: 40vh;
     height: fit-content;
-    background-color: #cbe5ea;
+    background-color: #ccccff;
 
     .login-form {
       display: flex;
@@ -25,6 +25,11 @@
 
       .feedback-submit-btn {
         margin-top: 20px;
+      }
+
+      button {
+        color: white;
+        font-weight: bold;
       }
     }
   }

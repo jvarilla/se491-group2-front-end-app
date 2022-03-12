@@ -1,3 +1,10 @@
 <div>
-  {{ location?.cityName }}
+  <button
+    (click)="onLocationClicked()"
+    class="location-item"
+    color="primary"
+    data-viewed-location-btn
+    mat-flat-button>
+    {{ location?.cityName }}
+  </button>
 </div>

@@ -11,7 +11,7 @@ export interface WeatherResult {
   currentConditions: Weather,
   tomorrowForecast: DayForecast,
   dayForecasts: DayForecast[],
-  hourlyForecasts: HourlyForecast[],
+  hourlyForecast: HourlyForecast[],
   precaution: Precaution,
   alert: WeatherAlert,
 }

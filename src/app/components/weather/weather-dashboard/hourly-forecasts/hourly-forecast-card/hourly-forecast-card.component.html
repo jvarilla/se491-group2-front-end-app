@@ -1,5 +1,10 @@
-<p style="p">
-  {{ hourlyForecast?.dayOfWeek }}
-  {{ hourlyForecast?.hour }}
-  {{ hourlyForecast?.weather?.temp }}
-</p>
+<mat-card (click)="openModal()"
+            tabindex="0">
+    {{ hourlyForecast?.dayOfWeek }}
+    {{ hourlyForecast?.hour | fromMilitaryHour }}
+    {{ hourlyForecast?.weather?.temp | toFahrenheit }}
+    <app-weather-icon
+      [weatherDescription]="hourlyForecast?.weather?.weatherDescription">
+    </app-weather-icon>
+</mat-card>
+

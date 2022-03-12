@@ -103,7 +103,7 @@
       }
     }
   ],
-  "hourlyForecasts": [
+  "hourlyForecast": [
     {
       "dayOfWeek": "Mon",
       "date": "2011-10-06",
@@ -125,7 +125,7 @@
         "humidity": 0.90,
         "windSpeed": 15.5,
         "currentClouds": 1,
-        "weatherDescription": "Snow"
+        "weatherDescription": "Drizzle"
       }
     },
     {
@@ -137,7 +137,7 @@
         "humidity": 0.90,
         "windSpeed": 15.5,
         "currentClouds": 1,
-        "weatherDescription": "Snow"
+        "weatherDescription": "Clear"
       }
     },
     {
@@ -149,7 +149,7 @@
         "humidity": 0.90,
         "windSpeed": 15.5,
         "currentClouds": 1,
-        "weatherDescription": "Snow"
+        "weatherDescription": "Thunderstorm"
       }
     },
     {

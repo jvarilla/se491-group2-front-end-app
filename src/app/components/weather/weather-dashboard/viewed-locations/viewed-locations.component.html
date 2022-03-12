@@ -2,5 +2,6 @@
 <app-location-card
   *ngFor="let location of locations"
   [location]="location"
+  (locationClicked)="onLocationClicked($event)"
 >
 </app-location-card>

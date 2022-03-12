@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Location} from "../../../../../classes/location/location.interface";
 
 @Component({
@@ -8,9 +8,14 @@ import {Location} from "../../../../../classes/location/location.interface";
 })
 export class LocationCardComponent implements OnInit {
   @Input() location: Location | undefined;
+  @Output() locationClicked = new EventEmitter<Location>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onLocationClicked(): void {
+    this.locationClicked.emit(this.location);
+  }
 }

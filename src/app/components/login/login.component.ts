@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Subscription} from "rxjs";
 import {BannerService} from "../shared/banner/banner.service";
-import {LOGOUT_SUCCESS_BODY, LOGOUT_SUCCESS_TITLE} from "../../constants/feedback.constants";
+import {LOGOUT_SUCCESS_BODY, LOGOUT_SUCCESS_TITLE} from "../../constants/login.constants";
 import {UserAuthService} from "../../service/user-auth/user-auth.service";
 
 @Component({
@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   onSubmitLogin(): void {
     this.userAuthService.login('', '');
+    this.loginForm.reset();
   }
 
   showLogoutBanner(): void {
