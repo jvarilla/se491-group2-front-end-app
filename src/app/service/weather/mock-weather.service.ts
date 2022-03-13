@@ -28,4 +28,8 @@ export class MockWeatherService {
   getWeatherByLocationByZipCode(zipCode: number): void {}
 
   getWeatherByLocationByCoords(lat: number, long: number): void {}
+
+  public getPreviouslySearchedLocation(): string | undefined {
+    return mockWeatherResult.currentLocation.cityName;
+  }
 }

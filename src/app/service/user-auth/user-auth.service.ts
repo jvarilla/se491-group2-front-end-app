@@ -8,6 +8,7 @@ import {Login} from "../../classes/login/login.interface";
 import {API_ROUTES} from "../routes/api-routes";
 import {BannerService} from "../../components/shared/banner/banner.service";
 import {SessionStorageService} from "../session-storage/session-storage.service";
+import {LOGIN_FAILURE_BODY, LOGIN_FAILURE_TITLE} from "../../constants/login.constants";
 
 @Injectable({
   providedIn: 'root'
@@ -57,13 +58,15 @@ export class UserAuthService {
         this._isAuthenticated = true;
         this.sessionStorageService.saveEntry(
           UserAuthService.USER_SESSION_STORAGE_KEY,
-          JSON.stringify(user))
+          JSON.stringify(user));
+        this.bannerService.closeBanners();
         this.router.navigateByUrl('/weather');
       },
       error: () => {
         this.bannerService
-          .showErrorBanner('Unable To Login',
-            'Please double check your credentials');
+          .showErrorBanner(
+            LOGIN_FAILURE_TITLE,
+            LOGIN_FAILURE_BODY);
       }
     });
   }

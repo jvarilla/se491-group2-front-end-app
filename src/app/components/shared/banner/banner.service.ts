@@ -9,6 +9,9 @@ export class BannerService {
   private bannerConfigSubject = new Subject<BannerConfig>();
   public bannerConfig$ = this.bannerConfigSubject.asObservable();
 
+  private bannerCloseSubject = new Subject<void>();
+  public bannerClose$ = this.bannerCloseSubject.asObservable();
+
   showSuccessBanner(title: string, body: string): void {
     this.bannerConfigSubject.next({
       title,
@@ -23,5 +26,9 @@ export class BannerService {
       body,
       status: BannerStatus.Error
     } as BannerConfig);
+  }
+
+  closeBanners(): void {
+    this.bannerCloseSubject.next();
   }
 }

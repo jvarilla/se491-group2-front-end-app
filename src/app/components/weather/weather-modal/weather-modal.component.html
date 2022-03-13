@@ -1,13 +1,14 @@
 <h2 mat-dialog-title>{{ title}}</h2>
 
 <mat-dialog-content>
+  <div>{{ weather?.weatherDescription }}</div>
   <app-weather-icon [weatherDescription]="weather?.weatherDescription">
   </app-weather-icon>
   <ul>
     <li>Temperature: {{ weather?.temp | toFahrenheit }}</li>
-    <li>Cloudiness: {{ weather?.currentClouds }}</li>
-    <li>Humidity: {{ weather?.humidity }}</li>
-    <li>Wind Speed: {{ weather?.windSpeed }} mph</li>
+    <li>Cloudiness: {{ weather?.currentClouds | toCloudinessLevel  }}</li>
+    <li>Humidity: {{ weather?.humidity | toHumidity }}</li>
+    <li>Wind Speed: {{ weather?.windSpeed | toMPH }}</li>
   </ul>
 </mat-dialog-content>
 

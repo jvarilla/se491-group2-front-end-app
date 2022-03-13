@@ -47,13 +47,20 @@ export class LoginComponent implements OnInit, OnDestroy {
   onSubmitLogin(): void {
     const login: Login = {...this.loginForm.value};
     this.userAuthService.login(login);
-    this.loginForm.reset();
+    this.resetLoginForm();
   }
 
   showLogoutBanner(): void {
     this.bannerService.showSuccessBanner(
       LOGOUT_SUCCESS_TITLE,
       LOGOUT_SUCCESS_BODY);
+  }
+
+  private resetLoginForm(): void {
+    this.loginForm.reset();
+    this.loginForm.markAsPristine();
+    this.loginForm.controls[`userName`].setErrors(null);
+    this.loginForm.controls[`password`].setErrors(null);
   }
 
   ngOnDestroy(): void {

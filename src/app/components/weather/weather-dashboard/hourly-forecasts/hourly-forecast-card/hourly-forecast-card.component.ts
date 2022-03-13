@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {HourlyForecast} from "../../../../../classes/weather/forecast/hourly-forecast.interface";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {WeatherModalComponent} from "../../../weather-modal/weather-modal.component";
+import {MilitaryTimeToHourPipe} from "../../../../../pipes/military-time-to-hour.pipe";
 
 @Component({
   selector: 'app-hourly-forecast-card',
@@ -9,9 +10,13 @@ import {WeatherModalComponent} from "../../../weather-modal/weather-modal.compon
   styleUrls: ['./hourly-forecast-card.component.scss']
 })
 export class HourlyForecastCardComponent implements OnInit {
-  @Input() hourlyForecast: HourlyForecast | undefined;
 
-  constructor(private dialog: MatDialog) { }
+  @Input() hourlyForecast: HourlyForecast | undefined;
+  militaryTimePipe: MilitaryTimeToHourPipe;
+
+  constructor(private dialog: MatDialog) {
+    this.militaryTimePipe = new MilitaryTimeToHourPipe();
+  }
 
   ngOnInit(): void {
   }
@@ -23,11 +28,22 @@ export class HourlyForecastCardComponent implements OnInit {
     dialogConfig.autoFocus = true;
 
     dialogConfig.data = {
-      title: 'Hourly Forecast for: ',
+      title: this.getTitle(),
       weather: this.hourlyForecast?.weather,
     };
 
     this.dialog.open(WeatherModalComponent, dialogConfig);
+  }
+
+  private getTitle(): string {
+    if (this.hourlyForecast) {
+      const dateString = new Date(this.hourlyForecast.date).toLocaleDateString();
+      const hourString = this.militaryTimePipe.transform(this.hourlyForecast.hour)
+      return `Hourly Forecast for ${dateString} ${hourString}`;
+
+    } else {
+      return 'Hourly Forecast';
+    }
   }
 
 }

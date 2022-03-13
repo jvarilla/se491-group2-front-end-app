@@ -44,7 +44,7 @@
 
   <div class="viewed-locations blue-pop">
     <app-viewed-locations
-      [locations]="currentUser?.recentlyViewedLocations"
+      [locations]="(recentlyViewedLocationsForUser$ | async)"
       (locationSelected)="onLocationSelected($event)"
     >
     </app-viewed-locations>

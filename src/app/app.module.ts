@@ -33,6 +33,9 @@ import {MilitaryTimeToHourPipe} from "./pipes/military-time-to-hour.pipe";
 import {FahrenheitPipe} from "./pipes/fahrenheit.pipe";
 import { WeatherModalComponent } from './components/weather/weather-modal/weather-modal.component';
 import { WeatherIconComponent } from './components/weather/weather-icon/weather-icon.component';
+import {HumidityPipe} from "./pipes/humidity.pipe";
+import {MPHPipe} from "./pipes/mph.pipe";
+import {CloudinessLevelPipe} from "./pipes/cloudiness-level.pipe";
 
 @NgModule({
   declarations: [
@@ -54,7 +57,10 @@ import { WeatherIconComponent } from './components/weather/weather-icon/weather-
     RatingComponent,
     BannerComponent,
     MilitaryTimeToHourPipe,
+    CloudinessLevelPipe,
     FahrenheitPipe,
+    HumidityPipe,
+    MPHPipe,
     WeatherModalComponent,
     WeatherIconComponent,
   ],
@@ -70,7 +76,7 @@ import { WeatherIconComponent } from './components/weather/weather-icon/weather-
     ReactiveFormsModule,
     MatInputModule,
   ],
-  providers: [{ provide: WeatherService, useClass: MockWeatherService}],
+  // providers: [{ provide: WeatherService, useClass: MockWeatherService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

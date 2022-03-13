@@ -10,6 +10,7 @@ import {Subscription} from "rxjs";
 })
 export class BannerComponent implements OnInit, OnDestroy {
   bannerConfigSubscription: Subscription;
+  bannerCloseSubscription: Subscription;
   title: string = '';
   body: string = '';
   isError: boolean = true;
@@ -23,7 +24,13 @@ export class BannerComponent implements OnInit, OnDestroy {
         this.body = bannerConfig.body;
         this.isError = bannerConfig.status === BannerStatus.Error;
         this.show = true;
-      })
+      });
+
+    this.bannerCloseSubscription =
+      this.bannerService.bannerClose$
+        .subscribe(() => {
+          this.show = false;
+        });
   }
 
   ngOnInit(): void {}
@@ -34,5 +41,6 @@ export class BannerComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.bannerConfigSubscription?.unsubscribe();
+    this.bannerCloseSubscription?.unsubscribe();
   }
 }

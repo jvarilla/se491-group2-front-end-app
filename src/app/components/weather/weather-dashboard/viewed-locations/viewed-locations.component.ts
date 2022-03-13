@@ -7,7 +7,7 @@ import {Location} from "../../../../classes/location/location.interface";
   styleUrls: ['./viewed-locations.component.scss']
 })
 export class ViewedLocationsComponent implements OnInit {
-  @Input() locations: Location[] | undefined;
+  @Input() locations: Location[] | null | undefined;
   @Output() locationSelected = new EventEmitter<Location>();
 
   constructor() { }

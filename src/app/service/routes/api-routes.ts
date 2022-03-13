@@ -17,6 +17,6 @@ export const API_ROUTES = {
     GET_BY_ZIPCODE: (zipCode: number, userName: string) =>
       `/weather/zip/${zipCode}?userName=${userName}`,
     GET_BY_LAT_LONG: (lat: number, long: number, userName: string) =>
-      `/weather/current-location/${lat}/${long}?userName=${userName}`
+      `/weather/coords/${lat}/${long}?userName=${userName}`
   },
 }

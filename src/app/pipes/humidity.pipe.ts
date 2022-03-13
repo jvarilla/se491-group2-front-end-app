@@ -1,11 +1,11 @@
 import {Pipe, PipeTransform} from "@angular/core";
 
-@Pipe({name: 'toFahrenheit'})
-export class FahrenheitPipe implements PipeTransform {
+@Pipe({name: 'toHumidity'})
+export class HumidityPipe implements PipeTransform {
   transform(value: number = 0): string {
     if (value == undefined) {
       return `?`;
     }
-    return `${value.toFixed(1)}°F`;
+    return `${value.toFixed(2)}°`;
   }
 }

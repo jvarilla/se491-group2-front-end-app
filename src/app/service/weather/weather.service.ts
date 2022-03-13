@@ -16,6 +16,7 @@ import {SessionStorageService} from "../session-storage/session-storage.service"
 export class WeatherService {
   private weatherResultSubject: Subject<WeatherResult> = new Subject<WeatherResult>();
   public weatherResult$: Observable<WeatherResult> = this.weatherResultSubject.asObservable();
+  private _previouslySearchedLocation: string | undefined;
 
   constructor(private readonly httpService: HttpService,
               private readonly userAuthService: UserAuthService,
@@ -35,7 +36,10 @@ export class WeatherService {
       .get<WeatherResult>(
         API_ROUTES.WEATHER.GET_BY_CITY(cityName, userName))
       .subscribe({
-        next: (weatherResult: WeatherResult) => this.weatherResultSubject.next(weatherResult),
+        next: (weatherResult: WeatherResult) => {
+          this._previouslySearchedLocation = weatherResult.currentLocation.cityName;
+          this.weatherResultSubject.next(weatherResult)
+        },
         error: () => this.handleFailureToGetWeather()
       });
   }
@@ -45,17 +49,24 @@ export class WeatherService {
     this.httpService
       .get<WeatherResult>(API_ROUTES.WEATHER.GET_BY_ZIPCODE(zipCode, userName))
       .subscribe({
-        next: (weatherResult: WeatherResult) => this.weatherResultSubject.next(weatherResult),
+        next: (weatherResult: WeatherResult) => {
+          this._previouslySearchedLocation = weatherResult.currentLocation.cityName;
+          this.weatherResultSubject.next(weatherResult)
+        },
         error: () => this.handleFailureToGetWeather()
       });
   }
 
   getWeatherByLocationByCoords(lat: number, long: number): void {
     const userName: string = this.userAuthService.getCurrentUser()?.userName || '';
+    console.log('user name: ', userName);
     this.httpService
       .get<WeatherResult>(API_ROUTES.WEATHER.GET_BY_LAT_LONG(lat, long, userName))
       .subscribe({
-        next: (weatherResult: WeatherResult) => this.weatherResultSubject.next(weatherResult),
+        next: (weatherResult: WeatherResult) => {
+          this._previouslySearchedLocation = weatherResult.currentLocation.cityName;
+          this.weatherResultSubject.next(weatherResult)
+        },
         error: () => this.handleFailureToGetWeather()
       });
   }
@@ -64,5 +75,9 @@ export class WeatherService {
     this.bannerService.showErrorBanner(
       GET_WEATHER_FAILURE_TITLE,
       GET_WEATHER_FAILURE_BODY);
+  }
+
+  public getPreviouslySearchedLocation(): string | undefined {
+    return this._previouslySearchedLocation;
   }
 }
