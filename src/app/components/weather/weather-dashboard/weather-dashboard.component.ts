@@ -39,7 +39,7 @@ export class WeatherDashboardComponent implements OnInit,  OnDestroy {
       this.weatherService.weatherResult$
         .subscribe((weatherResult: WeatherResult) => {
             this.weatherResult = weatherResult;
-
+            this.bannerService.closeBanners();
             if (weatherResult?.alert != null) {
               const alert = weatherResult?.alert
               this.bannerService.showErrorBanner(
