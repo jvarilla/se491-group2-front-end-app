@@ -28,8 +28,13 @@ export class HourlyForecastCardComponent implements OnInit {
     dialogConfig.autoFocus = true;
 
     dialogConfig.data = {
-      title: this.getTitle(),
-      weather: this.hourlyForecast?.weather,
+      weather: {
+        title: this.getTitle(),
+        weather: this.hourlyForecast?.weather,
+      },
+      isNight: this.hourlyForecast !== undefined
+        && this.hourlyForecast?.hour !== undefined
+        && (this.hourlyForecast.hour < 4 || this.hourlyForecast.hour > 17)
     };
 
     this.dialog.open(WeatherModalComponent, dialogConfig);

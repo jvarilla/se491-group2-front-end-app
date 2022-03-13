@@ -11,11 +11,13 @@ import {Weather} from "../../../classes/weather/weather.interface";
 export class WeatherModalComponent implements OnInit {
   title: string | undefined;
   weather: Weather | undefined;
+  isNight: boolean = false;
 
   constructor(private dialogRef: MatDialogRef<Component>,
-              @Inject(MAT_DIALOG_DATA) data: WeatherModalData) {
-    this.title = data.title;
-    this.weather = data.weather;
+              @Inject(MAT_DIALOG_DATA) data: { weather: WeatherModalData, isNight?: boolean}) {
+    this.title = data.weather.title;
+    this.weather = data.weather.weather;
+    this.isNight = data.isNight || false;
   }
 
   ngOnInit() {}

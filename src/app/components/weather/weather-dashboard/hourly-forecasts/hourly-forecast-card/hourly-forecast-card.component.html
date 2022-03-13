@@ -7,6 +7,8 @@
     {{ hourlyForecast?.hour | fromMilitaryHour }}
     {{ hourlyForecast?.weather?.temp | toFahrenheit }}
     <app-weather-icon
+      [isNight]="hourlyForecast !== undefined && hourlyForecast?.hour !== undefined
+                && (hourlyForecast.hour < 4 || hourlyForecast.hour > 17)"
       [weatherDescription]="hourlyForecast?.weather?.weatherDescription">
     </app-weather-icon>
 </mat-card>

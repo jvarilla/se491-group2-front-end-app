@@ -9,6 +9,7 @@ import {Weather} from "../../../../classes/weather/weather.interface";
 export class WeatherTileComponent implements OnInit {
   @Input() label: string | undefined;
   @Input() weather: Weather | undefined;
+  @Input() showNightMode?: boolean = false;
 
   constructor() { }
 

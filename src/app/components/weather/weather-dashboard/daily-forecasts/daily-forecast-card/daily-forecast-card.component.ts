@@ -24,8 +24,11 @@ export class DailyForecastCardComponent implements OnInit {
     dialogConfig.autoFocus = true;
 
     dialogConfig.data = {
-      title: this.getTitle(),
-      weather: this.dailyForecast?.weather,
+      weather: {
+        title: this.getTitle(),
+        weather: this.dailyForecast?.weather,
+      },
+      isNight: false,
     };
 
     this.dialog.open(WeatherModalComponent, dialogConfig);

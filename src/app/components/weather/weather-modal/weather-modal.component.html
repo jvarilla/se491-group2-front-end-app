@@ -3,7 +3,9 @@
 <mat-dialog-content style="display: flex; flex-direction: column; align-items: center">
   <div>{{ weather?.weatherDescription }}</div>
   <app-weather-icon
-    [weatherDescription]="weather?.weatherDescription">
+    [weatherDescription]="weather?.weatherDescription"
+    [multiplier]="'2'"
+  >
   </app-weather-icon>
   <p>Temperature: {{ weather?.temp | toFahrenheit }}</p>
   <p>Cloudiness: {{ weather?.currentClouds | toCloudinessLevel  }}</p>
