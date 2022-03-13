@@ -5,6 +5,7 @@ import {Subscription} from "rxjs";
 import {BannerService} from "../shared/banner/banner.service";
 import {LOGOUT_SUCCESS_BODY, LOGOUT_SUCCESS_TITLE} from "../../constants/login.constants";
 import {UserAuthService} from "../../service/user-auth/user-auth.service";
+import {Login} from "../../classes/login/login.interface";
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit, OnDestroy {
               private readonly bannerService: BannerService,
               private readonly userAuthService: UserAuthService) {
     this.loginForm = this.fb.group({
-      username: [null, [Validators.required]],
+      userName: [null, [Validators.required]],
       password: [null, [Validators.required]]
     });
 
@@ -44,7 +45,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnInit(): void {}
 
   onSubmitLogin(): void {
-    this.userAuthService.login('', '');
+    const login: Login = {...this.loginForm.value};
+    this.userAuthService.login(login);
     this.loginForm.reset();
   }
 

@@ -7,6 +7,8 @@ import {GeolocationService} from "../geolocation/geolocation.service";
 import {Coords} from "../../classes/geolocation/coords.interface";
 import {BannerService} from "../../components/shared/banner/banner.service";
 import {GET_WEATHER_FAILURE_BODY, GET_WEATHER_FAILURE_TITLE} from "../../constants/weather.constants";
+import {UserAuthService} from "../user-auth/user-auth.service";
+import {SessionStorageService} from "../session-storage/session-storage.service";
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +18,7 @@ export class WeatherService {
   public weatherResult$: Observable<WeatherResult> = this.weatherResultSubject.asObservable();
 
   constructor(private readonly httpService: HttpService,
+              private readonly userAuthService: UserAuthService,
               private readonly geolocationService: GeolocationService,
               private readonly bannerService: BannerService) {}
 
@@ -27,8 +30,10 @@ export class WeatherService {
   }
 
   getWeatherByCityName(cityName: string): void {
+    const userName: string = this.userAuthService.getCurrentUser()?.userName || '';
     this.httpService
-      .get<WeatherResult>(API_ROUTES.WEATHER.GET_BY_CITY(cityName))
+      .get<WeatherResult>(
+        API_ROUTES.WEATHER.GET_BY_CITY(cityName, userName))
       .subscribe({
         next: (weatherResult: WeatherResult) => this.weatherResultSubject.next(weatherResult),
         error: () => this.handleFailureToGetWeather()
@@ -36,8 +41,9 @@ export class WeatherService {
   }
 
   getWeatherByLocationByZipCode(zipCode: number): void {
+    const userName: string = this.userAuthService.getCurrentUser()?.userName || '';
     this.httpService
-      .get<WeatherResult>(API_ROUTES.WEATHER.GET_BY_ZIPCODE(zipCode))
+      .get<WeatherResult>(API_ROUTES.WEATHER.GET_BY_ZIPCODE(zipCode, userName))
       .subscribe({
         next: (weatherResult: WeatherResult) => this.weatherResultSubject.next(weatherResult),
         error: () => this.handleFailureToGetWeather()
@@ -45,8 +51,9 @@ export class WeatherService {
   }
 
   getWeatherByLocationByCoords(lat: number, long: number): void {
+    const userName: string = this.userAuthService.getCurrentUser()?.userName || '';
     this.httpService
-      .get<WeatherResult>(API_ROUTES.WEATHER.GET_BY_LAT_LONG(lat, long))
+      .get<WeatherResult>(API_ROUTES.WEATHER.GET_BY_LAT_LONG(lat, long, userName))
       .subscribe({
         next: (weatherResult: WeatherResult) => this.weatherResultSubject.next(weatherResult),
         error: () => this.handleFailureToGetWeather()

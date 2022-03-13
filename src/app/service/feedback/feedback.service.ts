@@ -21,7 +21,7 @@ export class FeedbackService {
               private readonly userAuthService: UserAuthService) {}
 
   public postFeedback(feedback: Feedback): void {
-    feedback.userId = this.userAuthService.getCurrentUser()?.userId || '';
+    feedback.userName = this.userAuthService.getCurrentUser()?.userName || '';
 
     this.httpService
       .post<Feedback>(API_ROUTES.FEEDBACK.POST(), feedback)

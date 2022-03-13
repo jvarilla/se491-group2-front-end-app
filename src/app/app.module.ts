@@ -5,9 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from "./shared/material.module";
-import { WeatherSearchComponent } from './components/old/weather-search/weather-search.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
-import { WeatherReadingCardComponent } from './components/old/weather-reading-card/weather-reading-card.component';
 import {HttpClientModule} from "@angular/common/http";
 import { WeatherDashboardComponent } from './components/weather/weather-dashboard/weather-dashboard.component';
 import { LoginComponent } from './components/login/login.component';
@@ -41,8 +39,6 @@ import { WeatherIconComponent } from './components/weather/weather-icon/weather-
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    WeatherSearchComponent,
-    WeatherReadingCardComponent,
     WeatherDashboardComponent,
     LoginComponent,
     FeedbackComponent,

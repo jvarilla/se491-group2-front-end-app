@@ -1,5 +1,5 @@
 export interface Feedback {
-  userId: string,
+  userName: string,
   rating: number,
   comments: string
 }
