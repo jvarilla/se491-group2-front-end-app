@@ -1,4 +1,13 @@
-<p>
-  {{ dailyForecast?.dayOfWeek }}
-  {{ dailyForecast?.weather?.temp | toFahrenheit }}
-</p>
+<mat-card
+  (click)="openModal()"
+  (keydown.space)="openModal()"
+  (keydown.enter)="openModal()"
+  style="color: black"
+  tabindex="0">
+  <app-weather-icon
+    [weatherDescription]="dailyForecast?.weather?.weatherDescription">
+  </app-weather-icon>
+  <div style="display: table-cell; vertical-align: middle;padding-top: -2px;">
+    {{ dailyForecast?.dayOfWeek }} {{ dailyForecast?.date | date: 'MM/dd' }} {{ dailyForecast?.weather?.temp | toFahrenheit }}
+  </div>
+</mat-card>

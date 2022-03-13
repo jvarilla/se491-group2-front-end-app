@@ -1,21 +1,23 @@
 <h2 mat-dialog-title>{{ title}}</h2>
 
-<mat-dialog-content>
+<mat-dialog-content style="display: flex; flex-direction: column; align-items: center">
   <div>{{ weather?.weatherDescription }}</div>
-  <app-weather-icon [weatherDescription]="weather?.weatherDescription">
+  <app-weather-icon
+    [weatherDescription]="weather?.weatherDescription">
   </app-weather-icon>
-  <ul>
-    <li>Temperature: {{ weather?.temp | toFahrenheit }}</li>
-    <li>Cloudiness: {{ weather?.currentClouds | toCloudinessLevel  }}</li>
-    <li>Humidity: {{ weather?.humidity | toHumidity }}</li>
-    <li>Wind Speed: {{ weather?.windSpeed | toMPH }}</li>
-  </ul>
+  <p>Temperature: {{ weather?.temp | toFahrenheit }}</p>
+  <p>Cloudiness: {{ weather?.currentClouds | toCloudinessLevel  }}</p>
+  <p>Humidity: {{ weather?.humidity | toHumidity }}</p>
+  <p>Wind Speed: {{ weather?.windSpeed | toMPH }}</p>
 </mat-dialog-content>
-
 <mat-dialog-actions>
   <button
-    mat-raised-button
+    mat-flat-button
     mat-dialog-close
-    color="secondary"
-    (click)="close()">Close</button>
+    color="primary"
+    (click)="close()">
+    Close
+  </button>
 </mat-dialog-actions>
+
+

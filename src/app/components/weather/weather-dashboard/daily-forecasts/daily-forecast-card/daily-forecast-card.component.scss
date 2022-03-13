@@ -1,0 +1,28 @@
+:host::ng-deep mat-card {
+  padding: 2px;
+  font-family: 'Montserrat';
+  font-size: 1.1em;
+  max-height: fit-content;
+  font-style: italic;
+  background-color: white;
+  color: black !important;
+  margin: 5px auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+:host::ng-deep mat-card:hover, mat-card:focus {
+  background-color: rgba(0,0,0,0.50);
+  color: white !important;
+  margin:  5px auto 5px auto;
+  box-shadow: 5px 5px 0 white;
+
+  app-weather-icon {
+    img {
+      filter: invert(100%)
+    }
+  }
+}

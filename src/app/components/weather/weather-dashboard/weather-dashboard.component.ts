@@ -7,6 +7,7 @@ import {User} from "../../../classes/user/user.interface";
 import {UserAuthService} from "../../../service/user-auth/user-auth.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {LocationService} from "../../../service/location/location.service";
+import {BannerService} from "../../shared/banner/banner.service";
 
 @Component({
   selector: 'app-weather-dashboard',
@@ -24,6 +25,7 @@ export class WeatherDashboardComponent implements OnInit,  OnDestroy {
   constructor(private readonly fb: FormBuilder,
               private readonly weatherService: WeatherService,
               private readonly locationService: LocationService,
+              private readonly bannerService: BannerService,
               private readonly userAuthService: UserAuthService) {
     this.weatherSearchForm = this.fb.group({
       location: [null],
@@ -37,6 +39,14 @@ export class WeatherDashboardComponent implements OnInit,  OnDestroy {
       this.weatherService.weatherResult$
         .subscribe((weatherResult: WeatherResult) => {
             this.weatherResult = weatherResult;
+
+            if (weatherResult?.alert != null) {
+              const alert = weatherResult?.alert
+              this.bannerService.showErrorBanner(
+                `Weather Alert!: ${alert?.title}`,
+                `More Info: ${alert?.message}`);
+            }
+
             this.currentLocation = weatherResult.currentLocation;
             this.locationService.getLocationsForCurrentUser();
           }

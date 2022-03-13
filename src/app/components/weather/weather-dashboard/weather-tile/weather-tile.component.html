@@ -5,7 +5,13 @@
       </mat-card-header>
     </div>
   <div style="font-family: Montserrat;">
-    <p>{{ weather?.temp | toFahrenheit }}</p>
-    <p>{{ weather?.weatherDescription }}</p>
+    <div>{{ weather?.weatherDescription }}</div>
+    <app-weather-icon
+      [weatherDescription]="weather?.weatherDescription">
+    </app-weather-icon>
+    <p>Temperature: {{ weather?.temp | toFahrenheit }}</p>
+    <p>Cloudiness: {{ weather?.currentClouds | toCloudinessLevel  }}</p>
+    <p>Humidity: {{ weather?.humidity | toHumidity }}</p>
+    <p>Wind Speed: {{ weather?.windSpeed | toMPH }}</p>
   </div>
 </mat-card>
