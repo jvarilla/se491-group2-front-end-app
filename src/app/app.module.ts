@@ -36,6 +36,7 @@ import {MPHPipe} from "./pipes/mph.pipe";
 import {CloudinessLevelPipe} from "./pipes/cloudiness-level.pipe";
 import {WeatherService} from "./service/weather/weather.service";
 import {MockWeatherService} from "./service/weather/mock-weather.service";
+import { WelcomeDisplayComponent } from './components/weather/weather-dashboard/welcome-display/welcome-display.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import {MockWeatherService} from "./service/weather/mock-weather.service";
     MPHPipe,
     WeatherModalComponent,
     WeatherIconComponent,
+    WelcomeDisplayComponent,
   ],
   imports: [
     CommonModule,

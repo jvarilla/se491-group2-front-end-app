@@ -1,0 +1,14 @@
+<div style="padding:20px">
+  <h2>Welcome, {{ firstName }} {{ lastName }}</h2>
+  <div style="display:flex;flex-direction: column;">
+    <p>Current Time and Date</p>
+    <div style="font-size: 2em; margin-bottom: 10%;">
+      {{ date | date: 'hh:mm:ss a'}}
+    </div>
+    <div style="font-size: 2em">
+      {{ date | date: 'MM/dd/YYYY'}}
+    </div>
+  </div>
+</div>
+
+

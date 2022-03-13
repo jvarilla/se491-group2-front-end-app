@@ -6,8 +6,8 @@
   grid-template: "weather-search     location-title       precaution"
                  "viewed-locations  current-conditions    day-forecasts"
                  "viewed-locations  current-conditions    day-forecasts"
-                 "viewed-locations  tomorrow-forecast    day-forecasts"
-                 "viewed-locations  tomorrow-forecast    day-forecasts"
+                 "time-display  tomorrow-forecast    day-forecasts"
+                 "time-display  tomorrow-forecast    day-forecasts"
                  "hour-forecasts     hour-forecasts      hour-forecasts"
                  "hour-forecasts     hour-forecasts      hour-forecasts";
 
@@ -39,6 +39,11 @@
 
   .viewed-locations {
     grid-area: viewed-locations;
+    font-family: "Montserrat";
+  }
+
+  .time-display {
+    grid-area: time-display;
     font-family: "Montserrat";
   }
 

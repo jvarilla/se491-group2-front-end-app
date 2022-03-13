@@ -6,6 +6,6 @@ export class MPHPipe implements PipeTransform {
     if (value == undefined) {
       return `?`;
     }
-    return `${value.toFixed(1)}°MPH`;
+    return `${value.toFixed(1)}mph`;
   }
 }
